@@ -1,0 +1,40 @@
+# Silly Little Files
+::alert{type="info"}
+📒 This requires you to be able to install Private Networks on a Chromebook, most documentation cannot be translates, if you are looking for the Prox continue reading the next page.
+::
+Silly Little Files (not to be confused with the project name) is the documentation for importing files made from **Proton** into **Chromebooks**
+If you have gotten Github Pro this will be easier to setup with Firebase.
+
+Once you have made your Firebase Project, make a new Github repo for the project.
+Make your repo by forking [SLF](https://github.com/DamianSwanAAJHS2/SillyLittleFiles/tree/main)
+Click the
+::badge{type="sucess"}
+Code
+::
+button on the repo's main page.
+Click `Codespaces` and then `Create codespace on main`
+Once in there you can run
+  ::terminal
+  ---
+  content:
+  - npm install -g firebase-tools
+  - firebase login --no-localhost
+  - firebase init
+  ---
+  ::
+  ::alert{type="danger"}
+If you get prompted to setup Github Actions here **don't** this will be broken since you are in a codespace! We'll do this manually.
+::
+Once you have that done, go ahead and run `firebase deploy` and see the result webpage.
+::alert{type="info"}
+Note, you can setup custom domains in your project settings, or skip the custom domain step altogether
+::
+Check out the [Production](https://github.com/DamianSwanAAJHS2/SillyLittleFiles/blob/main/.github/workflows/deploy-prod.yml) & [Preview](https://github.com/DamianSwanAAJHS2/SillyLittleFiles/blob/main/.github/workflows/deploy-preview.yml) files in [SLF](https://github.com/DamianSwanAAJHS2/SillyLittleFiles/tree/main) to use as an example for setting up your actions.
+Make sure to edit the `projectId` value!
+You will also need to add a repository secret in your settings with your service account ID. You can read about getting that [here](https://github.com/FirebaseExtended/action-hosting-deploy/blob/main/docs/service-account.md)
+
+After all this, each time you push or modify something in the repo, it should update in the deployment.
+
+::alert{type="info"}
+If this is too hard, you can also use another static site hosting provider :D
+::
