@@ -12,7 +12,7 @@ export default defineAppConfig({
       }
     },
     github: {
-      dir: '.starters/default/content',
+      dir: 'content',
       branch: 'main',
       repo: 'sillylittle.selfhost',
       owner: 'DamianSwanAAJHS2',
