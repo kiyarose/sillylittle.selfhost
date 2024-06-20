@@ -22,7 +22,7 @@ jobs:
         with:
           token: ${{ secrets.MAIN_PAT }}
           rest-method: issues
-          rest-uri: /repos/dswan36/SillyLittleFiles/issues
+          rest-uri: /repos/{{ owner }}/{{ repo }}/issues
           body: |
             A new pull request has been opened in ${{ repository }}.
             **PR Title:** ${{ steps.pr_info.outputs.PR_Title }}
@@ -35,7 +35,7 @@ jobs:
         with:
           token: ${{ secrets.MAIN_PAT }}
           rest-method: issues
-          rest-uri: /repos/{owner}/{repo}/issues?state=open"
+          rest-uri: /repos/{{ owner }}/{{ repo }}/issues?state=open"
           owner: dswan36
           repo: SillyLittleFiles
           output: issue_number
@@ -45,7 +45,7 @@ jobs:
         with:
           token: ${{ secrets.MAIN_PAT }}
           rest-method: issues.update
-          rest-uri: /repos/{owner}/{repo}/issues/{issue_number}"
+          rest-uri: /repos/{{ owner }}/{{ repo }}/issues/{issue_number}"
           owner: dswan36
           repo: SillyLittleFiles
           issue_number: ${{ steps.new_issue_number.outputs.issue_number[0].number }}
