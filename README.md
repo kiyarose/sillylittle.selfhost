@@ -1,4 +1,4 @@
-# sillylitle.selfhost
+# SLF Self-Hosting
 <img align="left" src="" height="200" width="200" alt="badge"/>
 
 [SLF](https://github.com/dswan36/SillyLittleFiles) self-hosting documentation.\
