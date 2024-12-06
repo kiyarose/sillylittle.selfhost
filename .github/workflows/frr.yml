@@ -5,13 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - name: Find and Replace Go
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "go.sillylittle.tech"
           replace: "go2.sillylittle.tech"
           regex: false
-      - uses: actions/checkout@v2
+
       - name: Find and Replace Docs
         uses: jacobtomlinson/gha-find-replace@v3
         with:
