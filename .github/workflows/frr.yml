@@ -1,0 +1,21 @@
+name: Update Bserver
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: FR Go
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "go.sillylittle.tech"
+          replace: "go2.sillylittle.tech"
+          regex: false
+
+      - name: FR Docs
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "docs.sillylittle.tech"
+          replace: "docs2.sillylittle.tech"
+          regex: false
