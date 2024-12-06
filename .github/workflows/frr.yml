@@ -6,14 +6,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Find and Replace Go
+      - name: FR Go
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "go.sillylittle.tech"
           replace: "go2.sillylittle.tech"
           regex: false
 
-      - name: Find and Replace Docs
+      - name: FR Docs
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "docs.sillylittle.tech"
