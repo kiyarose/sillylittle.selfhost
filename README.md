@@ -5,7 +5,7 @@
 [SLF](https://github.com/kiyarose/SillyLittleFiles) self-hosting documentation.\
 <sub>Powered by [<img width=18 src="https://docus.dev/favicon.ico"></img>](https://docus.dev/)</sub>
 
-View it [here!](https://docs.sillylittle.tech) \
+View it [here!](https://docs2.sillylittle.tech) \
 Or, view it on [Github](https://github.com/kiyarose/sillylittle.selfhost/wiki).
 <br />
 
